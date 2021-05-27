@@ -14,13 +14,9 @@ function analizaPalabras(palabras) {
     let mayus = false;
     if (palabra.length % 2 === 0) {
       par = true;
-    } else {
-      par = false;
     }
     if (palabra.charAt(0) === palabra.charAt(0).toUpperCase()) {
       mayus = true;
-    } else {
-      mayus = false;
     }
     //   console.log(`es par? ${par} y es mayus? ${mayus}`);
     if (par === true && mayus === true) {
