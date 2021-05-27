@@ -1,11 +1,12 @@
-const array = ["hola", "Fotosíntesis", "Fusible", "yo"];
-const array2 = ["legible", "Inflamable", "comestible", "Array2"];
+const unionArray = [];
 function analizaPalabras(palabras) {
-  palabras.forEach((palabra, index) => {
+  palabras.forEach((palabra) => unionArray.push(palabra));
+  unionArray.forEach((palabra, index) => {
+    palabras.push(palabra);
     console.log("#######");
     console.log(`Palabra ${index + 1}: ${palabra}`);
     console.log(`Nº de caracteres: ${palabra.length}`);
-    let snake = `${palabra.charAt(0)}`;
+    let snake = palabra.charAt(0);
     for (const i of palabra.slice(1)) {
       snake += `-${i}`;
     }
@@ -34,6 +35,5 @@ function analizaPalabras(palabras) {
       console.log(`La palabra no contiene "ble"`);
     }
   });
+  console.log(unionArray);
 }
-analizaPalabras(array);
-analizaPalabras(array2);
