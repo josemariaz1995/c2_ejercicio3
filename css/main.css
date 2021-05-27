@@ -4,5 +4,6 @@ body {
 }
 form {
   background-color: darkcyan;
-  width: 450px;
+  width: 480px;
+  border-radius: 8px;
 }
