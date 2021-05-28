@@ -20,11 +20,11 @@ function analizaPalabras(palabras) {
       mayus = true;
     }
     //   console.log(`es par? ${par} y es mayus? ${mayus}`);
-    if (par === true && mayus === true) {
+    if (par && mayus) {
       console.log("La palabra es par y empieza por mayuscula.");
-    } else if (par === true && mayus !== true) {
+    } else if (par && !mayus) {
       console.log("La palabra es par y no empieza por mayuscula.");
-    } else if (par !== true && mayus === true) {
+    } else if (!par && mayus) {
       console.log("La palabra no es par y empieza por mayuscula.");
     } else {
       console.log("La palabra no es par y no empieza por mayuscula.");
@@ -34,6 +34,7 @@ function analizaPalabras(palabras) {
     } else {
       console.log(`La palabra no contiene "ble"`);
     }
+    return unionArray;
   });
   console.log(unionArray);
 }
